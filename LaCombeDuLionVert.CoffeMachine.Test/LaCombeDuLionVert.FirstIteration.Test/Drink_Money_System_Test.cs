@@ -17,11 +17,13 @@ namespace LaCombeDuLionVert.FirstIteration.Test
         {
             var buyableTea = new BuyableDrink();
             buyableTea.DrinkType = CoffeeCommand.DrinkType.Tea;
-            buyableTea.Amount = 0.6f;
+            buyableTea.Pounds = 0;
+            buyableTea.Cents = 60;
 
-            var result = MoneyHandler.Handle(buyableTea, 1);
+            var result = MoneyHandler.Handle(buyableTea, 1,0);
 
-            Assert.AreEqual(0, 4f, result);
+            Assert.AreEqual(0, 0, result.Item1);
+            Assert.AreEqual(0, 40, result.Item2);
         }
     }
 }

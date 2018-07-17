@@ -1,4 +1,4 @@
-﻿using LaCombeDuLionVert.CoffeeMachine;
+﻿using LaCombeDuLionVert.CoffeeCommand;
 using System;
 using System.Collections.Generic;
 using System.Linq;

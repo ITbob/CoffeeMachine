@@ -8,9 +8,9 @@ namespace LaCombeDuLionVert.MoneySystem
 {
     public static class MoneyHandler
     {
-        public static Single Handle(IBuyableItem item, Single money)
+        public static Tuple<Int32, Int32> Handle(IBuyableItem item, Int32 pounds, Int32 cents)
         {
-            return -1;
+            return new Tuple<int, int>(-1,-1);
         }
     }
 }

@@ -8,7 +8,8 @@ namespace LaCombeDuLionVert.MoneySystem
 {
     public interface IBuyableItem
     {
-        Single Amount { get; set; }
+        Int32 Pounds { get; set; }
+        Int32 Cents { get; set; }
         String GetLabel();
     }
 }

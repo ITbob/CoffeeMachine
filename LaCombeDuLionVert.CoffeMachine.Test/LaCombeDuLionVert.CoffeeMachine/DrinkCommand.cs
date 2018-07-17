@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LaCombeDuLionVert.CoffeeCommand
 {
-    public class DrinkMakerCommand
+    public class DrinkCommand
     {
         public DrinkType DrinkType { get; set; }
 
@@ -37,12 +37,12 @@ namespace LaCombeDuLionVert.CoffeeCommand
 
         public override bool Equals(object obj)
         {
-            if(!(obj is DrinkMakerCommand))
+            if(!(obj is DrinkCommand))
             {
                 return false;
             }
 
-            var command = (DrinkMakerCommand) obj;
+            var command = (DrinkCommand) obj;
 
             return this.HasStick == command.HasStick 
                 && this.SugarCount == command.SugarCount 

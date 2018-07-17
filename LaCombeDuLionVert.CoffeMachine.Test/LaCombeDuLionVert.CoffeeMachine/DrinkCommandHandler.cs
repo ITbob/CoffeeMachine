@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace LaCombeDuLionVert.CoffeeCommand
 {
-    public static class DrinkMakerProtocol
+    public static class DrinkCommandHandler
     {
         public static DrinkType GetTypeDrink(String s)
         {
@@ -27,9 +27,9 @@ namespace LaCombeDuLionVert.CoffeeCommand
             return result;
         }
 
-        public static DrinkMakerCommand Handle(String s)
+        public static DrinkCommand Handle(String s)
         {
-            DrinkMakerCommand result = new DrinkMakerCommand();
+            DrinkCommand result = new DrinkCommand();
 
             String[] data = s.Split(':');
 

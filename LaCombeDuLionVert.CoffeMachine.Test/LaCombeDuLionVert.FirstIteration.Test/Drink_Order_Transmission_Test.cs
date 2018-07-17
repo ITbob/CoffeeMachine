@@ -16,9 +16,9 @@ namespace LaCombeDuLionVert.FirstIteration.Test
         {
             var command = "T:1:0";
 
-            var result = DrinkMakerProtocol.Handle(command);
+            var result = DrinkCommandHandler.Handle(command);
 
-            var expectedResult = new DrinkMakerCommand()
+            var expectedResult = new DrinkCommand()
             {
                 HasStick = true,
                 SugarCount = 1,
@@ -33,9 +33,9 @@ namespace LaCombeDuLionVert.FirstIteration.Test
         {
             var command = "H::";
 
-            var result = DrinkMakerProtocol.Handle(command);
+            var result = DrinkCommandHandler.Handle(command);
 
-            var expectedResult = new DrinkMakerCommand()
+            var expectedResult = new DrinkCommand()
             {
                 HasStick = false,
                 SugarCount = 0,
@@ -50,9 +50,9 @@ namespace LaCombeDuLionVert.FirstIteration.Test
         {
             var command = "C:2:0";
 
-            var result = DrinkMakerProtocol.Handle(command);
+            var result = DrinkCommandHandler.Handle(command);
 
-            var expectedResult = new DrinkMakerCommand()
+            var expectedResult = new DrinkCommand()
             {
                 HasStick = true,
                 SugarCount = 2,
@@ -67,9 +67,9 @@ namespace LaCombeDuLionVert.FirstIteration.Test
         {
             var command = "M:message-content";
 
-            var result = DrinkMakerProtocol.Handle(command);
+            var result = DrinkCommandHandler.Handle(command);
 
-            var expectedResult = new DrinkMakerCommand()
+            var expectedResult = new DrinkCommand()
             {
                 Message = "message-content"
             };

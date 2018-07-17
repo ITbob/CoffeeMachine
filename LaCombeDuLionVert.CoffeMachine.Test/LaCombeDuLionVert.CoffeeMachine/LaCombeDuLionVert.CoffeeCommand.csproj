@@ -40,8 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DrinkMakerCommand.cs" />
-    <Compile Include="DrinkMakerProtocol.cs" />
+    <Compile Include="DrinkCommand.cs" />
+    <Compile Include="DrinkCommandHandler.cs" />
     <Compile Include="DrinkType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

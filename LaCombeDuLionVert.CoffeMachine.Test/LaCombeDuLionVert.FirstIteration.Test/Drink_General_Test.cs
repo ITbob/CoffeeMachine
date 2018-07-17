@@ -19,5 +19,6 @@ namespace LaCombeDuLionVert.FirstIteration.Test
 
             Assert.AreEqual(true, result.IsPassed);
         }
+
     }
 }

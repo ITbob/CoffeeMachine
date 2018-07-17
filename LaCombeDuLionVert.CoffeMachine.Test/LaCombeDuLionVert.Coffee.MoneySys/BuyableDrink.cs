@@ -11,8 +11,8 @@ namespace LaCombeDuLionVert.Coffee.MoneySys
     public class BuyableDrink : IBuyableItem
     {
         public DrinkType DrinkType { get; set; }
-        public Int32 Pounds { get; set; }
-        public Int32 Cents { get; set; }
+        public Int32 Pounds { get; set; } = 0;
+        public Int32 Cents { get; set; } = 0;
 
         public string GetLabel()
         {

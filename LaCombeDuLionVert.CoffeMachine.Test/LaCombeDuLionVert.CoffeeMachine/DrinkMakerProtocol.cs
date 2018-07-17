@@ -14,33 +14,35 @@ namespace LaCombeDuLionVert.CoffeeMachine
             DrinkMakerCommand result = new DrinkMakerCommand();
 
             String[] data = s.Split(':');
-            String type = data[0];
-            String sugarCount = data[1];
-            String stick = data[2];
 
-            if (type == "T")
+            if (data[0] == "T")
             {
                 result.DrinkType = DrinkType.Tea;
             }
-            else if (type == "H")
+            else if (data[0] == "H")
             {
                 result.DrinkType = DrinkType.Chocolate;
             }
-            else if (type == "C")
+            else if (data[0] == "C")
             {
                 result.DrinkType = DrinkType.Coffee;
             }
+            else if(data[0] == "M")
+            {
+                result.Message = data[1];
+                return result;
+            }
 
-            if (sugarCount == String.Empty)
+            if (data[1] == String.Empty)
             {
                 result.SugarCount = 0;
             }
             else
             {
-                result.SugarCount = Convert.ToInt32(sugarCount);
+                result.SugarCount = Convert.ToInt32(data[1]);
             }
 
-            if (stick == "0")
+            if (data[2] == "0")
             {
                 result.HasStick = true;
             }

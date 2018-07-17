@@ -12,7 +12,7 @@ namespace LaCombeDuLionVert.MoneySystem
         {
             var remainingPounds = pounds - item.Pounds;
             cents += remainingPounds * 100;
-            var remainingCents = cents - item.Cents;
+            Int32 remainingCents = cents - item.Cents;
 
             return new Tuple<int, int>(0, remainingCents);
         }

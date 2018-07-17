@@ -39,7 +39,10 @@ namespace LaCombeDuLionVert.CoffeMachine
 
             if(amount.Item1 < 0 || amount.Item2 < 0)
             {
-                return new CoffeeMachineAck() { IsPassed = false };
+                return new CoffeeMachineAck() {
+                    IsPassed = false,
+                    Message = $"{Math.Abs(amount.Item1)}.{Math.Abs(amount.Item2)} are missing."
+                };
             }
 
             //3. we send the command to the drink maker

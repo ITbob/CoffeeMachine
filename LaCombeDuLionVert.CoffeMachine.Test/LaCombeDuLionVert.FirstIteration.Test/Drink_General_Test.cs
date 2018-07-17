@@ -20,5 +20,14 @@ namespace LaCombeDuLionVert.FirstIteration.Test
             Assert.AreEqual(true, result.IsPassed);
         }
 
+        [Test]
+        public void Should_Not_Have_A_Tea()
+        {
+            var command = "T:1:0";
+            var result = CoffeeMachineHelper.Handle(command, 0, 20);
+
+            Assert.AreEqual(false, result.IsPassed);
+            Assert.AreEqual(result.Message, "0.20 are missing.");
+        }
     }
 }

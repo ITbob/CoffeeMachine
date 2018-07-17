@@ -24,7 +24,7 @@ namespace LaCombeDuLionVert.CoffeMachine
             new BuyableDrink(){
                 DrinkType = DrinkType.Coffee,
                 Cents = 60
-            },
+            }
         };
 
 

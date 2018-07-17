@@ -11,6 +11,7 @@ namespace LaCombeDuLionVert.CoffeeCommand
         None,
         Tea,
         Coffee,
-        Chocolate
+        Chocolate,
+        Orange,
     }
 }

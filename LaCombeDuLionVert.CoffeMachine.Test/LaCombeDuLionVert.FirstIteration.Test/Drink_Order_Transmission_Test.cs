@@ -44,5 +44,22 @@ namespace LaCombeDuLionVert.FirstIteration.Test
 
             Assert.AreEqual(expectedResult, result);
         }
+
+        [Test]
+        public void Should_get_one_coffee_with_two_sugars_and_one_stick()
+        {
+            var command = "C:2:0";
+
+            var result = DrinkMakerProtocol.Handle(command);
+
+            var expectedResult = new DrinkMakerCommand()
+            {
+                HasStick = true,
+                SugarCount = 2,
+                DrinkType = DrinkType.Coffee
+            };
+
+            Assert.AreEqual(expectedResult, result);
+        }
     }
 }

@@ -10,31 +10,41 @@ namespace LaCombeDuLionVert.CoffeeCommand
     public static class DrinkCommandHandler
     {
 
-        public static DrinkType GetTypeDrink(String s)
+        public static DrinkType GetTypeDrink(Char s)
         {
             var result = DrinkType.None;
 
-            if(s.Length == 1)
+            if (s == 'T')
             {
-                if (s == "T")
-                {
-                    result = DrinkType.Tea;
-                }
-                else if (s == "H")
-                {
-                    result = DrinkType.Chocolate;
-                }
-                else if (s == "C")
-                {
-                    result = DrinkType.Coffee;
-                }
-                else if (s == "O")
-                {
-                    result = DrinkType.Orange;
-                }
+                result = DrinkType.Tea;
             }
-            
+            else if (s == 'H')
+            {
+                result = DrinkType.Chocolate;
+            }
+            else if (s == 'C')
+            {
+                result = DrinkType.Coffee;
+            }
+            else if (s == 'O')
+            {
+                result = DrinkType.Orange;
+            }
+
             return result;
+        }
+
+        private static TemperatureRange GetTemperaturRange(Char s)
+        {
+            if(s == 'h')
+            {
+                return TemperatureRange.Hot;
+            }
+            else
+            {
+                return TemperatureRange.None;
+            }
+
         }
 
         public static DrinkCommand Handle(String s)
@@ -50,7 +60,15 @@ namespace LaCombeDuLionVert.CoffeeCommand
             }
             else
             {
-                result.DrinkType = GetTypeDrink(data[0]);
+                if(data[0].Length == 1)
+                {
+                    result.DrinkType = GetTypeDrink(data[0][0]);
+                }
+                else
+                {
+                    result.DrinkType = GetTypeDrink(data[0][0]);
+                    result.Temperature = GetTemperaturRange(data[0][1]);
+                }
             }
 
             if (data[1] == String.Empty)

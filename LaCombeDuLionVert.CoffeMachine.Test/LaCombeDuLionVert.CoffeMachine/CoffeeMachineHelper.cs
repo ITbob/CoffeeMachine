@@ -35,7 +35,7 @@ namespace LaCombeDuLionVert.CoffeMachine
         public static CoffeeMachineAck Handle(String text, Int32 pounds, Int32 cents)
         {
             //1. get the buyable item from the text
-            var type = DrinkCommandHandler.GetTypeDrink(text.Split(':')[0]);
+            var type = DrinkCommandHandler.GetTypeDrink(text.Split(':')[0][0]);
             var buyableItem = _drinks.Where(d => d.DrinkType == type).Single();
 
             //2. check we have enough money

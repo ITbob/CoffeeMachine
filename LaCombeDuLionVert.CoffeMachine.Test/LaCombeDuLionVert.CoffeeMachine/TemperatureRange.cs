@@ -8,6 +8,7 @@ namespace LaCombeDuLionVert.CoffeeCommand
 {
     public enum TemperatureRange
     {
+        None,
         Cold,
         medium,
         Hot

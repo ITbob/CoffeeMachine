@@ -105,7 +105,7 @@ namespace LaCombeDuLionVert.FirstIteration.Test
             {
                 HasStick = false,
                 SugarCount = 0,
-                DrinkType = DrinkType.Chocolate,
+                DrinkType = DrinkType.Coffee,
                 Temperature = TemperatureRange.Hot
             };
 

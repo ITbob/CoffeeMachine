@@ -22,12 +22,27 @@ namespace LaCombeDuLionVert.CoffeeMachine
             {
                 result.DrinkType = DrinkType.Tea;
             }
+            else if (type == "H")
+            {
+                result.DrinkType = DrinkType.Chocolate;
+            }
 
-            result.SugarCount = Convert.ToInt32(sugarCount);
+            if(sugarCount == String.Empty)
+            {
+                result.SugarCount = 0;
+            }
+            else
+            {
+                result.SugarCount = Convert.ToInt32(sugarCount);
+            }
 
-            if (Convert.ToInt32(sugarCount) == 1)
+            if (sugarCount == String.Empty)
             {
                 result.HasStick = false;
+            }
+            else
+            {
+                result.HasStick = Convert.ToInt32(stick) == 1 ? true : false;
             }
 
             return result;

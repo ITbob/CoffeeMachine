@@ -43,5 +43,14 @@ namespace LaCombeDuLionVert.CoffeeMachine
                 && this.SugarCount == command.SugarCount 
                 && this.DrinkType == command.DrinkType;
         }
+
+        public override int GetHashCode()
+        {
+            var hashCode = 1947966917;
+            hashCode = hashCode * -1521134295 + DrinkType.GetHashCode();
+            hashCode = hashCode * -1521134295 + _sugarCount.GetHashCode();
+            hashCode = hashCode * -1521134295 + HasStick.GetHashCode();
+            return hashCode;
+        }
     }
 }

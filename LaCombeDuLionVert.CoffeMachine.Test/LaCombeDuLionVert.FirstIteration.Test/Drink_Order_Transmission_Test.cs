@@ -61,5 +61,20 @@ namespace LaCombeDuLionVert.FirstIteration.Test
 
             Assert.AreEqual(expectedResult, result);
         }
+
+        [Test]
+        public void Should_get_the_user_interface_message()
+        {
+            var command = "M:message-content";
+
+            var result = DrinkMakerProtocol.Handle(command);
+
+            var expectedResult = new DrinkMakerCommand()
+            {
+                Message = "message-content"
+            };
+
+            Assert.AreEqual(expectedResult, result);
+        }
     }
 }

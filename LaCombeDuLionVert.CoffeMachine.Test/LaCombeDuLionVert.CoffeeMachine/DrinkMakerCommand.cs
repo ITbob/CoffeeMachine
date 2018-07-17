@@ -30,6 +30,11 @@ namespace LaCombeDuLionVert.CoffeeMachine
         }
         public Boolean HasStick { get; set; }
 
+        //I may not be sure to understand the "message received" feature
+        //it sounds weird for me to have the user interface message
+        //in the command.
+        public String Message { get; set; } = String.Empty;
+
         public override bool Equals(object obj)
         {
             if(!(obj is DrinkMakerCommand))
@@ -41,7 +46,8 @@ namespace LaCombeDuLionVert.CoffeeMachine
 
             return this.HasStick == command.HasStick 
                 && this.SugarCount == command.SugarCount 
-                && this.DrinkType == command.DrinkType;
+                && this.DrinkType == command.DrinkType
+                && this.Message == command.Message;
         }
 
         public override int GetHashCode()
@@ -50,6 +56,7 @@ namespace LaCombeDuLionVert.CoffeeMachine
             hashCode = hashCode * -1521134295 + DrinkType.GetHashCode();
             hashCode = hashCode * -1521134295 + _sugarCount.GetHashCode();
             hashCode = hashCode * -1521134295 + HasStick.GetHashCode();
+            hashCode = hashCode * -1521134295 + Message.GetHashCode();
             return hashCode;
         }
     }

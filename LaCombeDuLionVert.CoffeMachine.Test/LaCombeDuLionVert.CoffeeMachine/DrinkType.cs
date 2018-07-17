@@ -8,6 +8,7 @@ namespace LaCombeDuLionVert.CoffeeCommand
 {
     public enum DrinkType
     {
+        None,
         Tea,
         Coffee,
         Chocolate

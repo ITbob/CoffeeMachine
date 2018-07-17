@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Drink_General_Test.cs" />
     <Compile Include="Drink_Money_System_Test.cs" />
     <Compile Include="Drink_Order_Transmission_Test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

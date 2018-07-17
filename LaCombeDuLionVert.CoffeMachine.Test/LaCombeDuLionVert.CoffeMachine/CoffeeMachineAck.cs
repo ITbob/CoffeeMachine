@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace LaCombeDuLionVert.CoffeMachine
 {
-    public class Class1
+    public struct CoffeeMachineAck
     {
+        public Boolean IsPassed { get; set; }
+        public String Message { get; set; }
     }
 }

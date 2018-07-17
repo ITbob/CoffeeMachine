@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>d30cf2bf-a4f5-426b-af27-3b8c9f95f6e9</ProjectGuid>
+    <ProjectGuid>{D30CF2BF-A4F5-426B-AF27-3B8C9F95F6E9}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>LaCombeDuLionVert.CoffeMachine</RootNamespace>
@@ -30,24 +30,33 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System"/>
-    
-    <Reference Include="System.Core"/>
-    <Reference Include="System.Xml.Linq"/>
-    <Reference Include="System.Data.DataSetExtensions"/>
-    
-    
-    <Reference Include="Microsoft.CSharp"/>
-    
-    <Reference Include="System.Data"/>
-    
-    <Reference Include="System.Net.Http"/>
-    
-    <Reference Include="System.Xml"/>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="CoffeeMachineAck.cs" />
+    <Compile Include="CoffeeMachineHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LaCombeDuLionVert.Coffee.MoneySys\LaCombeDuLionVert.Coffee.MoneySys.csproj">
+      <Project>{24a19f58-c8b0-42b3-a1ba-3d8f54802af2}</Project>
+      <Name>LaCombeDuLionVert.Coffee.MoneySys</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LaCombeDuLionVert.CoffeeMachine\LaCombeDuLionVert.CoffeeCommand.csproj">
+      <Project>{431f5d08-c70b-4f86-93bd-2308c544d8ce}</Project>
+      <Name>LaCombeDuLionVert.CoffeeCommand</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LaCombeDuLionVert.MoneySystem\LaCombeDuLionVert.MoneySystem.csproj">
+      <Project>{37dce627-3a3b-453f-96f1-6d97d70df96f}</Project>
+      <Name>LaCombeDuLionVert.MoneySystem</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
- </Project>
+</Project>

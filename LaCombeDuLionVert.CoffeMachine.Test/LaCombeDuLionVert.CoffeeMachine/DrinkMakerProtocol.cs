@@ -11,7 +11,26 @@ namespace LaCombeDuLionVert.CoffeeMachine
     {
         public static DrinkMakerCommand Handle(String s)
         {
-            return null;
+            DrinkMakerCommand result = new DrinkMakerCommand();
+
+            String[] data = s.Split(':');
+            String type = data[0];
+            String sugarCount = data[1];
+            String stick = data[2];
+
+            if (type == "T")
+            {
+                result.DrinkType = DrinkType.Tea;
+            }
+
+            result.SugarCount = Convert.ToInt32(sugarCount);
+
+            if (Convert.ToInt32(sugarCount) == 1)
+            {
+                result.HasStick = false;
+            }
+
+            return result;
         }
     }
 }

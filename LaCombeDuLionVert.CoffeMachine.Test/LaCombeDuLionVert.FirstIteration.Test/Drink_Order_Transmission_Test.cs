@@ -18,12 +18,14 @@ namespace LaCombeDuLionVert.FirstIteration.Test
 
             var result = DrinkMakerProtocol.Handle(command);
 
-            Assert.AreEqual(new DrinkMakerCommand()
+            var expectedResult = new DrinkMakerCommand()
             {
                 HasStick = false,
                 SugarCount = 1,
                 DrinkType = DrinkType.Tea
-            }, result);
+            };
+
+            Assert.AreEqual(expectedResult, result);
         }
     }
 }

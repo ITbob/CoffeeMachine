@@ -29,5 +29,19 @@ namespace LaCombeDuLionVert.CoffeeMachine
             }
         }
         public Boolean HasStick { get; set; }
+
+        public override bool Equals(object obj)
+        {
+            if(!(obj is DrinkMakerCommand))
+            {
+                return false;
+            }
+
+            var command = (DrinkMakerCommand) obj;
+
+            return this.HasStick == command.HasStick 
+                && this.SugarCount == command.SugarCount 
+                && this.DrinkType == command.DrinkType;
+        }
     }
 }

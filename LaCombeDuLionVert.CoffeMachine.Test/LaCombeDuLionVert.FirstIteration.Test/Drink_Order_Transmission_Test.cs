@@ -20,7 +20,7 @@ namespace LaCombeDuLionVert.FirstIteration.Test
 
             var expectedResult = new DrinkMakerCommand()
             {
-                HasStick = false,
+                HasStick = true,
                 SugarCount = 1,
                 DrinkType = DrinkType.Tea
             };

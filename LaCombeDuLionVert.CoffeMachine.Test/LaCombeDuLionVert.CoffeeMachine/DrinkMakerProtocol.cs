@@ -26,8 +26,12 @@ namespace LaCombeDuLionVert.CoffeeMachine
             {
                 result.DrinkType = DrinkType.Chocolate;
             }
+            else if (type == "C")
+            {
+                result.DrinkType = DrinkType.Coffee;
+            }
 
-            if(sugarCount == String.Empty)
+            if (sugarCount == String.Empty)
             {
                 result.SugarCount = 0;
             }
@@ -36,13 +40,13 @@ namespace LaCombeDuLionVert.CoffeeMachine
                 result.SugarCount = Convert.ToInt32(sugarCount);
             }
 
-            if (sugarCount == String.Empty)
+            if (stick == "0")
             {
-                result.HasStick = false;
+                result.HasStick = true;
             }
             else
             {
-                result.HasStick = Convert.ToInt32(stick) == 1 ? true : false;
+                result.HasStick = false;
             }
 
             return result;

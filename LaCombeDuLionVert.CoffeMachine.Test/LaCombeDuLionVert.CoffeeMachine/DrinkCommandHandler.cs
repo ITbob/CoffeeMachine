@@ -24,6 +24,10 @@ namespace LaCombeDuLionVert.CoffeeCommand
             {
                 result = DrinkType.Coffee;
             }
+            else if (s == "O")
+            {
+                result = DrinkType.Orange;
+            }
             return result;
         }
 

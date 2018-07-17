@@ -27,5 +27,22 @@ namespace LaCombeDuLionVert.FirstIteration.Test
 
             Assert.AreEqual(expectedResult, result);
         }
+
+        [Test]
+        public void Should_get_one_chocolate_with_no_sugar_and_no_stick()
+        {
+            var command = "H::";
+
+            var result = DrinkMakerProtocol.Handle(command);
+
+            var expectedResult = new DrinkMakerCommand()
+            {
+                HasStick = false,
+                SugarCount = 0,
+                DrinkType = DrinkType.Chocolate
+            };
+
+            Assert.AreEqual(expectedResult, result);
+        }
     }
 }

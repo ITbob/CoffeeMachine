@@ -10,7 +10,11 @@ namespace LaCombeDuLionVert.MoneySystem
     {
         public static Tuple<Int32, Int32> Handle(IBuyableItem item, Int32 pounds, Int32 cents)
         {
-            return new Tuple<int, int>(-1,-1);
+            var remainingPounds = pounds - item.Pounds;
+            cents += remainingPounds * 100;
+            var remainingCents = cents - item.Cents;
+
+            return new Tuple<int, int>(0, remainingCents);
         }
     }
 }

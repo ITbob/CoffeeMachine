@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LaCombeDuLionVert.CoffeeMachine
+namespace LaCombeDuLionVert.CoffeeCommand
 {
     public static class DrinkMakerProtocol
     {

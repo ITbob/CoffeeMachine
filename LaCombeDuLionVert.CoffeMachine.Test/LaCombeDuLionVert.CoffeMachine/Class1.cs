@@ -4,12 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LaCombeDuLionVert.CoffeeCommand
+namespace LaCombeDuLionVert.CoffeMachine
 {
-    public enum DrinkType
+    public class Class1
     {
-        Tea,
-        Coffee,
-        Chocolate
     }
 }

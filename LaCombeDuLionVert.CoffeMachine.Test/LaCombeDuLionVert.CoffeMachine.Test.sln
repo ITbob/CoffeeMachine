@@ -5,7 +5,13 @@ VisualStudioVersion = 15.0.27428.2043
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaCombeDuLionVert.FirstIteration.Test", "LaCombeDuLionVert.FirstIteration.Test\LaCombeDuLionVert.FirstIteration.Test.csproj", "{05B9491C-FE22-46DD-902F-E368336B57F8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaCombeDuLionVert.CoffeeMachine", "LaCombeDuLionVert.CoffeeMachine\LaCombeDuLionVert.CoffeeMachine.csproj", "{431F5D08-C70B-4F86-93BD-2308C544D8CE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaCombeDuLionVert.CoffeeCommand", "LaCombeDuLionVert.CoffeeMachine\LaCombeDuLionVert.CoffeeCommand.csproj", "{431F5D08-C70B-4F86-93BD-2308C544D8CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaCombeDuLionVert.MoneySystem", "LaCombeDuLionVert.MoneySystem\LaCombeDuLionVert.MoneySystem.csproj", "{37DCE627-3A3B-453F-96F1-6D97D70DF96F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaCombeDuLionVert.Coffee.MoneySys", "LaCombeDuLionVert.Coffee.MoneySys\LaCombeDuLionVert.Coffee.MoneySys.csproj", "{24A19F58-C8B0-42B3-A1BA-3D8F54802AF2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaCombeDuLionVert.CoffeMachine", "LaCombeDuLionVert.CoffeMachine\LaCombeDuLionVert.CoffeMachine.csproj", "{D30CF2BF-A4F5-426B-AF27-3B8C9F95F6E9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +27,18 @@ Global
 		{431F5D08-C70B-4F86-93BD-2308C544D8CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{431F5D08-C70B-4F86-93BD-2308C544D8CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{431F5D08-C70B-4F86-93BD-2308C544D8CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37DCE627-3A3B-453F-96F1-6D97D70DF96F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37DCE627-3A3B-453F-96F1-6D97D70DF96F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37DCE627-3A3B-453F-96F1-6D97D70DF96F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37DCE627-3A3B-453F-96F1-6D97D70DF96F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24A19F58-C8B0-42B3-A1BA-3D8F54802AF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24A19F58-C8B0-42B3-A1BA-3D8F54802AF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24A19F58-C8B0-42B3-A1BA-3D8F54802AF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24A19F58-C8B0-42B3-A1BA-3D8F54802AF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D30CF2BF-A4F5-426B-AF27-3B8C9F95F6E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D30CF2BF-A4F5-426B-AF27-3B8C9F95F6E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D30CF2BF-A4F5-426B-AF27-3B8C9F95F6E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D30CF2BF-A4F5-426B-AF27-3B8C9F95F6E9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -9,25 +9,31 @@ namespace LaCombeDuLionVert.CoffeeCommand
 {
     public static class DrinkCommandHandler
     {
+
         public static DrinkType GetTypeDrink(String s)
         {
             var result = DrinkType.None;
-            if (s == "T")
+
+            if(s.Length == 1)
             {
-                result = DrinkType.Tea;
+                if (s == "T")
+                {
+                    result = DrinkType.Tea;
+                }
+                else if (s == "H")
+                {
+                    result = DrinkType.Chocolate;
+                }
+                else if (s == "C")
+                {
+                    result = DrinkType.Coffee;
+                }
+                else if (s == "O")
+                {
+                    result = DrinkType.Orange;
+                }
             }
-            else if (s == "H")
-            {
-                result = DrinkType.Chocolate;
-            }
-            else if (s == "C")
-            {
-                result = DrinkType.Coffee;
-            }
-            else if (s == "O")
-            {
-                result = DrinkType.Orange;
-            }
+            
             return result;
         }
 

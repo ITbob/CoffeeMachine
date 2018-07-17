@@ -10,6 +10,11 @@ namespace LaCombeDuLionVert.CoffeeCommand
     {
         public DrinkType DrinkType { get; set; }
 
+        //I dont like creating this reference
+        //because it 's possible to have a hot orange juice
+        //which is not good, but let's refactor this at the next iteration...
+        public TemperatureRange Temperature { get; set; }
+
         public Int32 _sugarCount = 0;
         public Int32 SugarCount
         {
@@ -45,8 +50,9 @@ namespace LaCombeDuLionVert.CoffeeCommand
             var command = (DrinkCommand) obj;
 
             return this.HasStick == command.HasStick 
-                && this.SugarCount == command.SugarCount 
+                && this.SugarCount == command.SugarCount
                 && this.DrinkType == command.DrinkType
+                && this.Temperature == command.Temperature
                 && this.Message == command.Message;
         }
 
@@ -57,6 +63,7 @@ namespace LaCombeDuLionVert.CoffeeCommand
             hashCode = hashCode * -1521134295 + _sugarCount.GetHashCode();
             hashCode = hashCode * -1521134295 + HasStick.GetHashCode();
             hashCode = hashCode * -1521134295 + Message.GetHashCode();
+            hashCode = hashCode * -1521134295 + Temperature.GetHashCode();
             return hashCode;
         }
     }

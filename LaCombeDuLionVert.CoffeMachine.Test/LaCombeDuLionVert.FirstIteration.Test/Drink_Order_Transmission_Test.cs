@@ -93,5 +93,23 @@ namespace LaCombeDuLionVert.FirstIteration.Test
 
             Assert.AreEqual(expectedResult, result);
         }
+
+        [Test]
+        public void Should_get_one_hot_chocolate()
+        {
+            var command = "Ch::";
+
+            var result = DrinkCommandHandler.Handle(command);
+
+            var expectedResult = new DrinkCommand()
+            {
+                HasStick = false,
+                SugarCount = 0,
+                DrinkType = DrinkType.Chocolate,
+                Temperature = TemperatureRange.Hot
+            };
+
+            Assert.AreEqual(expectedResult, result);
+        }
     }
 }
